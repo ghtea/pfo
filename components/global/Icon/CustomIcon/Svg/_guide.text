@@ -1,0 +1,12 @@
+
+1. path 에 fill="currentColor"  추가
+2. svg 에서 width, height 제거
+
+3. svg 속성으로 아래 것들과 기존의 viewBox 이용
+
+  aria-hidden="true" 
+  focusable="false" 
+  role="img" 
+  xmlns="http://www.w3.org/2000/svg" 
+
+4. global/Icon/CustomIcon/index.tsx 의 SvgName 에 union 중 하나로 아이콘 이름 추가
