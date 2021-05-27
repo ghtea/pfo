@@ -105,7 +105,7 @@ export const CheeBoardDiv = styled.div`
 `;
 
 export const BottomDiv = styled.div`
-  position: relative;
-  bottom: -25px;
+  position: absolute;
+  bottom: -5px;
   color: ${(p: Props) => p.theme.color.main.s8};
 `;

@@ -8,7 +8,7 @@ export const RootHeader = styled.header`
 export const EntireBar = styled.div`
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   width: 100%;
@@ -16,9 +16,6 @@ export const EntireBar = styled.div`
 
   position: fixed;
   padding: 4px;
-
-
-  //border-bottom: 2px solid ${(p: Props) => p.theme.color.basic.s5};
 `;
 
 export const IconDiv = styled.div`
@@ -36,8 +33,12 @@ export const NavUl = styled.ul`
   
   color: ${(p: Props) => p.theme.color.main.s9};
   margin-top: 6px;
-  margin-right: 70px;
   letter-spacing: 2px;
+  margin-right: auto;
+
+  @media (min-width: ${(p: Props) => p.theme.media.sm}) {
+    margin-right: 70px;
+  }
 
   & > li:nth-child(n+2){
     margin-left: 12px;

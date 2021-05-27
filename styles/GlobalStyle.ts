@@ -2,6 +2,8 @@ import { createGlobalStyle, ThemedStyledProps } from 'styled-components';
 import themeDict from 'styles/theme';
 
 import reset from 'styled-reset';
+import all from './default/all';
+
 import a from './default/a';
 import body from './default/body';
 import button from './default/button';
@@ -18,6 +20,8 @@ import textarea from './default/textarea';
 export const GlobalStyle = createGlobalStyle`
   ${reset}
   
+  ${all}
+
   ${a}
   ${body}
   ${button}

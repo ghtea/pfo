@@ -14,7 +14,7 @@ export default function Greeting() {
         <S.AboveDiv>
           <S.ImageDiv>
             <Image
-              src='/profile.png'
+              src='/images/profile.png'
               alt='Picture of the author'
               width={200}
               height={200}

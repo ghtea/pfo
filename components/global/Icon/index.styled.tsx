@@ -24,9 +24,6 @@ export const RootDiv = styled.div`
 
   color: ${(p: RootDivPorps) => p.color};
 
-  position: fixed;
-  padding: 4px;
-
 `;
 
 //   ${(p: Props) => p.theme.color }

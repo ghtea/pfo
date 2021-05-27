@@ -4,6 +4,8 @@ const list = `
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
+
+    box-sizing: border-box;
   }
 
   li {
@@ -11,6 +13,8 @@ const list = `
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+
+    box-sizing: border-box;
   }
 `;
 export default list;

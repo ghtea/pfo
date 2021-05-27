@@ -24,7 +24,7 @@ export default function Projects() {
   return (
     <S.RootSection>
       <div>
-        <S_Main.BasicH2 id='projects'><span>Projects</span></S_Main.BasicH2>
+        <S_Main.BasicH2 id='##projects'><span>Projects</span></S_Main.BasicH2>
         
         <div>
           {projectList.map((eachProject, index) => (

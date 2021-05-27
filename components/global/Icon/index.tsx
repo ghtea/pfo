@@ -31,6 +31,8 @@ export default function Icon({ identity, kind, width="2rem", height="2rem", colo
     }
   }, [kind]);
 
+  
+
   return (
     <S.RootDiv width={width} height={height} color={color} >
       {identity[0] === 'fa' && (
