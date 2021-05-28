@@ -1,5 +1,5 @@
 ---
-title: 'Redux-Saga'
+name: 'Redux-Saga'
 level: 2
 ---
 

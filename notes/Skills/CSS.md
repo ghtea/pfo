@@ -1,5 +1,5 @@
 ---
-title: 'CSS'
+name: 'CSS'
 level: 3
 ---
 

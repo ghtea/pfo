@@ -1,5 +1,5 @@
 ---
-title: 'styled-components'
+name: 'styled-components'
 level: 2
 ---
 

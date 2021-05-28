@@ -1,5 +1,5 @@
 ---
-title: 'GraphQL'
+name: 'GraphQL'
 level: 1
 ---
 

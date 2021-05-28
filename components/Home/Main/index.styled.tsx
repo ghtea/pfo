@@ -6,6 +6,8 @@ export const RootMain = styled.main`
 
   color: ${(p: Props) => p.theme.color.basic.s7};
   background-color: ${(p: Props) => p.theme.color.basic.body};
+
+  padding-bottom: 160px;
 `;
 
 

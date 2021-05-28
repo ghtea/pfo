@@ -1,18 +1,26 @@
 import Image from 'next/image';
 import * as S from './index.styled';
 import * as S_Main from '../index.styled';
-import projectList from './projectList';
 import { useMemo } from 'react';
 import ProjectRectangle from './ProjectRectangle';
+import { ProjectData } from 'libraries/notes';
 
-export default function Projects() {
+type ProjectsProp = {
+  projectDataList: ProjectData[];
+};
+
+export default function Projects({ projectDataList }: ProjectsProp) {
   const mainProjectList = useMemo(() => {
-    return projectList.filter((eachProject) => eachProject.level === 'main');
-  }, [projectList]);
+    return projectDataList.filter(
+      (eachProject) => eachProject.level === 'main'
+    );
+  }, [projectDataList]);
 
   const subProjectList = useMemo(() => {
-    return projectList.filter((eachProject) => eachProject.level === 'sub');
-  }, [projectList]);
+    return projectDataList.filter(
+      (eachProject) => eachProject.level === 'sub'
+    );
+  }, [projectDataList]);
 
   return (
     <S.RootSection>
@@ -23,13 +31,19 @@ export default function Projects() {
 
         <S.ProjectGroup>
           {mainProjectList.map((eachProject, index) => (
-            <ProjectRectangle project={eachProject} key={`${eachProject.name}`} />
+            <ProjectRectangle
+              project={eachProject}
+              key={`${eachProject.name}`}
+            />
           ))}
         </S.ProjectGroup>
 
         <S.ProjectGroup>
           {subProjectList.map((eachProject, index) => (
-            <ProjectRectangle project={eachProject} key={`${eachProject.name}`} />
+            <ProjectRectangle
+              project={eachProject}
+              key={`${eachProject.name}`}
+            />
           ))}
         </S.ProjectGroup>
       </div>

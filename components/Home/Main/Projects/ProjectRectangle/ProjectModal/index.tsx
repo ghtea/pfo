@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import * as S from './index.styled';
-import { Project } from '../../projectList';
+import { ProjectData } from 'libraries/notes';
 import {
   Dispatch,
   MouseEventHandler,
@@ -10,9 +10,10 @@ import {
   useState,
 } from 'react';
 import Icon from 'components/global/Icon';
+import marked from 'marked';
 
 type ProjectModalProp = {
-  project: Project;
+  project: ProjectData;
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
 };
@@ -36,8 +37,12 @@ export default function ProjectModal({
   );
 
   return (
-    <S.RootArticle>
-      <h4>{project.name}</h4>
+    <S.RootArticle role='dialog'>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: marked(project.content || ''),
+        }}
+      ></div>
 
       <S.MainButtonUl>
         <li>
@@ -59,11 +64,7 @@ export default function ProjectModal({
         </li>
       </S.MainButtonUl>
 
-      <div>
-        
-      </div>
-
-
+      <div></div>
     </S.RootArticle>
   );
 }

@@ -10,8 +10,7 @@ export default function Footer() {
 
   return (
     <S.RootFooter>
-      <S.UpperBar>---------bar-----------</S.UpperBar>
-      <div>기타 정보</div>
+      <div></div>
     </S.RootFooter>
   );
 }

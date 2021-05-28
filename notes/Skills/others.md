@@ -1,5 +1,5 @@
 ---
-title: 'others'
+name: 'others'
 level: 1
 ---
 

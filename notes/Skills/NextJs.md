@@ -1,5 +1,5 @@
 ---
-title: 'NextJs'
+name: 'NextJs'
 level: 1
 ---
 

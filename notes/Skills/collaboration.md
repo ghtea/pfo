@@ -1,5 +1,5 @@
 ---
-title: 'collaboration'
+name: 'collaboration'
 level: 1
 ---
 

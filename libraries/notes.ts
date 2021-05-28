@@ -2,19 +2,20 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-const notesDirectory = path.join(process.cwd(), 'notes/Skills');
 
-export type SkillData = {
+
+
+export type NoteData = {
   id: string;
   name?: string;
-  level?: 1 | 2 | 3;
   content?: string;
-};
+}
 
-export function getSkillDataList() {
+export function getNoteDataList(notesDirectory: string) {
   // Get file names under /notes
   const fileNames = fs.readdirSync(notesDirectory);
-  const skillDataList: SkillData[] = fileNames.map((fileName) => {
+
+  const skillDataList: NoteData[] = fileNames.map((fileName) => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '');
 
@@ -34,4 +35,31 @@ export function getSkillDataList() {
   });
 
   return skillDataList;
+}
+
+
+
+
+export type SkillData =  NoteData & {
+  name: string;
+  level: 1 | 2 | 3;
+};
+
+export type ProjectData =  NoteData & {
+  name: string
+  level: 'main' | 'sub';
+  year: number;
+  github: string;
+  website?: string;
+};
+
+
+const skillNotesDirectory = path.join(process.cwd(), 'notes/skills');
+const projectNotesDirectory = path.join(process.cwd(), 'notes/projects');
+
+export function getDataDict() {
+  return ({
+    skills: getNoteDataList(skillNotesDirectory),
+    projects: getNoteDataList(projectNotesDirectory),
+  })
 }

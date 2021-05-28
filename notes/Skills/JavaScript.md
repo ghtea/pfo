@@ -1,5 +1,5 @@
 ---
-title: 'JavaScript'
+name: 'JavaScript'
 level: 3
 ---
 

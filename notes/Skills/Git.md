@@ -1,5 +1,5 @@
 ---
-title: 'Git'
+name: 'Git'
 level: 2
 ---
 

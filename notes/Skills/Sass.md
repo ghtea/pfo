@@ -1,5 +1,5 @@
 ---
-title: 'Sass'
+name: 'Sass'
 level: 2
 ---
 

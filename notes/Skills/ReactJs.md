@@ -1,5 +1,5 @@
 ---
-title: 'ReactJs'
+name: 'ReactJs'
 level: 3
 ---
 

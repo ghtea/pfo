@@ -1,5 +1,5 @@
 ---
-title: 'VueJs'
+name: 'VueJs'
 level: 1
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: 'MongoDB'
+name: 'MongoDB'
 level: 1
 ---
 

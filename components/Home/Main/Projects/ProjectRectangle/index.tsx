@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import * as S from './index.styled';
-import { Project } from '../projectList';
+import { ProjectData } from 'libraries/notes';
 import { MouseEventHandler, useCallback, useMemo, useState } from 'react';
 import Icon from 'components/global/Icon';
 import ProjectModal from './ProjectModal';
 
 type ProjectRectangleProp = {
-  project: Project;
+  project: ProjectData;
 };
 
 export default function ProjectRectangle({ project }: ProjectRectangleProp) {
@@ -34,7 +34,7 @@ export default function ProjectRectangle({ project }: ProjectRectangleProp) {
         onClick={onClickMainButton}
       >
         <Image
-          src='/images/projects/PortalView.png'
+          src={`/images/projects/${project.id}.png`}
           alt={`Picture of the ${project.name}`}
           layout='fill'
           objectFit='cover'
