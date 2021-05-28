@@ -1,39 +1,37 @@
 import Image from 'next/image';
 import * as S from './index.styled';
 import * as S_Main from '../index.styled';
+import projectList from './projectList';
 import { useMemo } from 'react';
-
-type Project = {
-  name: string;
-  level: 'convenient' | 'familiar';
-};
+import ProjectRectangle from './ProjectRectangle';
 
 export default function Projects() {
+  const mainProjectList = useMemo(() => {
+    return projectList.filter((eachProject) => eachProject.level === 'main');
+  }, [projectList]);
 
-  const projectList: Project[] = useMemo(() => {
-    return [
-      { name: 'React', level: 'convenient' },
-      { name: 'React', level: 'convenient' },
-      { name: 'React', level: 'convenient' },
-      { name: 'React', level: 'convenient' },
-      { name: 'React', level: 'convenient' },
-      { name: 'React', level: 'convenient' },
-    ];
-  }, []);
+  const subProjectList = useMemo(() => {
+    return projectList.filter((eachProject) => eachProject.level === 'sub');
+  }, [projectList]);
 
   return (
     <S.RootSection>
       <div>
-        <S_Main.BasicH2 id='##projects'><span>Projects</span></S_Main.BasicH2>
-        
-        <div>
-          {projectList.map((eachProject, index) => (
-            <S.ProjectArticle key={`${index}-${eachProject}`}>
-              <div>{eachProject.name}</div>
-            </S.ProjectArticle>
-          ))}
-        </div>
+        <S_Main.BasicH2 id='##projects'>
+          <span>Projects</span>
+        </S_Main.BasicH2>
 
+        <S.ProjectGroup>
+          {mainProjectList.map((eachProject, index) => (
+            <ProjectRectangle project={eachProject} key={`${eachProject.name}`} />
+          ))}
+        </S.ProjectGroup>
+
+        <S.ProjectGroup>
+          {subProjectList.map((eachProject, index) => (
+            <ProjectRectangle project={eachProject} key={`${eachProject.name}`} />
+          ))}
+        </S.ProjectGroup>
       </div>
     </S.RootSection>
   );

@@ -5,6 +5,7 @@ import { MouseEventHandler, useCallback, useMemo } from 'react';
 import { SkillData } from 'libraries/notes';
 import marked from 'marked';
 import SkillSquare from './SkillSquare';
+import Icon from 'components/global/Icon';
 
 export const getArticleId = (skillId: string) => `##skills-###${skillId}`;
 
@@ -37,7 +38,29 @@ export default function Skills({ skillDataList }: SkillsProp) {
         </S_Main.BasicH2>
         <div>
           <S.SkillGroup>
-            <span>Level 3: Confident </span>
+            <span>
+              <span>
+                <Icon
+                  identity={['fa', 'star']}
+                  kind='solid'
+                  width='2rem'
+                  height='2rem'
+                ></Icon>
+                <Icon
+                  identity={['fa', 'star']}
+                  kind='solid'
+                  width='2rem'
+                  height='2rem'
+                ></Icon>
+                <Icon
+                  identity={['fa', 'star']}
+                  kind='solid'
+                  width='2rem'
+                  height='2rem'
+                ></Icon>
+              </span>
+              <span>Confident</span>
+            </span>
             <S.SkillUl>
               {refinedSkillListDict.level3.map((eachSkillData, index) => (
                 <SkillSquare
@@ -48,7 +71,27 @@ export default function Skills({ skillDataList }: SkillsProp) {
             </S.SkillUl>
           </S.SkillGroup>
           <S.SkillGroup>
-          <span>Level 2: Used Many Times </span>
+            <span><span>
+                <Icon
+                  identity={['fa', 'star']}
+                  kind='solid'
+                  width='2rem'
+                  height='2rem'
+                ></Icon>
+                <Icon
+                  identity={['fa', 'star']}
+                  kind='solid'
+                  width='2rem'
+                  height='2rem'
+                ></Icon>
+                <Icon
+                  identity={['fa', 'star']}
+                  kind='regular'
+                  width='2rem'
+                  height='2rem'
+                ></Icon>
+              </span>
+              <span>Used Many Times</span></span>
             <S.SkillUl>
               {refinedSkillListDict.level2.map((eachSkillData, index) => (
                 <SkillSquare
@@ -59,7 +102,27 @@ export default function Skills({ skillDataList }: SkillsProp) {
             </S.SkillUl>
           </S.SkillGroup>
           <S.SkillGroup>
-          <span>Level 1: Used a Bit </span>
+            <span><span>
+                <Icon
+                  identity={['fa', 'star']}
+                  kind='solid'
+                  width='2rem'
+                  height='2rem'
+                ></Icon>
+                <Icon
+                  identity={['fa', 'star']}
+                  kind='regular'
+                  width='2rem'
+                  height='2rem'
+                ></Icon>
+                <Icon
+                  identity={['fa', 'star']}
+                  kind='regular'
+                  width='2rem'
+                  height='2rem'
+                ></Icon>
+              </span>
+              <span>Used A Bit</span></span>
             <S.SkillUl>
               {refinedSkillListDict.level1.map((eachSkillData, index) => (
                 <SkillSquare
@@ -71,7 +134,11 @@ export default function Skills({ skillDataList }: SkillsProp) {
           </S.SkillGroup>
         </div>
         <S.DetailDiv id={'##skills-detail'}>
-          {skillDataList.map((eachSkillData, index) => (
+          {[
+            ...refinedSkillListDict.level3,
+            ...refinedSkillListDict.level2,
+            ...refinedSkillListDict.level1,
+          ].map((eachSkillData, index) => (
             <S.SkillArticle
               id={getArticleId(eachSkillData.id)}
               key={eachSkillData.id}

@@ -1,6 +1,6 @@
 const span = `span{
   display: inline-flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 

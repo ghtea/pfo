@@ -104,7 +104,7 @@ export const CheeBoardDiv = styled.div`
   }
 `;
 
-export const BottomDiv = styled.div`
+export const BottomButton = styled.button`
   position: absolute;
   bottom: -5px;
   color: ${(p: Props) => p.theme.color.main.s8};

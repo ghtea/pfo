@@ -9,17 +9,22 @@ export const RootSection = styled(BasicSection)`
 `;
 
 export const SkillGroup = styled.div`
-
-  margin-top: 8px;
+  margin-top: 12px;
   & > span {
-    font-size: 1.4rem;
+    & > span:nth-child(1) {
+      color: ${(p: Props) => p.theme.color.main.s8};
+    }
+    & > span:nth-child(2) {
+      font-size: 1.4rem;
+      margin-left: 10px;
+    }
   }
 
   &:nth-child(1) > span {
-    font-weight: bold;
+    font-weight: lighter;
   }
   &:nth-child(2) > span {
-    font-weight: normal;
+    font-weight: lighter;
   }
   &:nth-child(3) > span {
     font-weight: lighter;
@@ -32,7 +37,6 @@ export const SkillUl = styled.ul`
   justify-content: center;
   align-items: center;
 `;
-
 
 export const DetailDiv = styled.div`
   margin-top: 20px;
@@ -62,6 +66,8 @@ export const SkillArticle = styled.article`
   }
 
   width: 100%;
+  max-width: ${(p: Props) => p.theme.media.sm - 160}px;
+  margin: auto;
 
   display: flex;
   flex-flow: column nowrap;
@@ -73,9 +79,15 @@ export const SkillArticle = styled.article`
   }
 
   ul {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
     li {
       display: inline-flex;
       flex-flow: row nowrap;
+      justify-content: flex-start;
       align-items: center;
 
       &::before {

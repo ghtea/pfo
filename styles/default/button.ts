@@ -6,6 +6,8 @@ const button = `button {
 
   box-sizing: border-box;
 
+  cursor: pointer;
+  
   width: auto%;
   height: auto;
 
@@ -20,6 +22,9 @@ const button = `button {
   &:focus {
     outline-style: none;
   }
+
+  border-style: none;
+  background: none;
 }`;
 
 export default button;

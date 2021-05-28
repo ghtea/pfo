@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useContext } from 'react';
+import { MouseEventHandler, useCallback, useContext } from 'react';
 import * as S from './index.styled';
 import Icon from 'components/global/Icon';
 import { ThemeContext } from 'styled-components';
@@ -7,6 +7,22 @@ import { Theme } from 'styles/theme';
 
 export default function Greeting() {
   const theme = useContext<Theme>(ThemeContext);
+
+  const onClickDown: MouseEventHandler<HTMLButtonElement> = useCallback(
+    (event) => {
+      event.preventDefault();
+
+      const targetElement = document.getElementById('##profile');
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        console.error(
+          'Profile 로 스크롤되도록, Profile 의 요소 아이디를 바르게 입력해야 합니다'
+        );
+      }
+    },
+    []
+  );
 
   return (
     <S.RootSection>
@@ -37,7 +53,7 @@ export default function Greeting() {
         </S.CheeBoardDiv>
       </div>
 
-      <S.BottomDiv>
+      <S.BottomButton onClick={onClickDown}>
         <Icon
           identity={['fa', 'angle-down']}
           kind='solid'
@@ -45,7 +61,7 @@ export default function Greeting() {
           width='60px'
           height='60px'
         />
-      </S.BottomDiv>
+      </S.BottomButton>
     </S.RootSection>
   );
 }

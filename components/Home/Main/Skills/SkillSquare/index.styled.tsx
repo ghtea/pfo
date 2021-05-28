@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import { Props } from 'styles/GlobalStyle';
-
-const spaceColor = 'hsl(51, 27%, 85%)';
-
+import {spaceColor} from 'components/Home/index.styled'
 
 export const RootLi = styled.li`
   display: inline-flex;
@@ -15,13 +13,13 @@ export const RootLi = styled.li`
   height: 60px;
 
   @media (min-width: ${(p: Props) => p.theme.media.sm}px) {
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
   }
 
   @media (min-width: ${(p: Props) => p.theme.media.md}px) {
-    width: 110px;
-    height: 110px;
+    width: 90px;
+    height: 90px;
   }
 
   border-width: 4px;
