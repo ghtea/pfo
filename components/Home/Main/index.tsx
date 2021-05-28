@@ -1,6 +1,7 @@
 import Greeting from './Greeting';
 import Profile from './Profile';
 import Skills from './Skills';
+import Collaboration from './Collaboration';
 import Projects from './Projects';
 import { SkillData, ProjectData } from 'libraries/notes';
 
@@ -17,6 +18,7 @@ export default function Main({ skillDataList, projectDataList }: MainProp) {
       <Greeting></Greeting>
       <Profile></Profile>
       <Skills skillDataList={skillDataList}></Skills>
+      <Collaboration></Collaboration>
       <Projects projectDataList={projectDataList}></Projects>
     </S.RootMain>
   );

@@ -23,26 +23,25 @@ export default function ProjectModal({
   isOpen,
   setIsOpen,
 }: ProjectModalProp) {
+
   const onClickMainButton: MouseEventHandler<HTMLButtonElement> = useCallback(
     (event) => {
       event.preventDefault();
       const { value } = event.currentTarget;
-      if (value === 'image') {
-        setIsOpen(!isOpen);
-      } else if (value === 'background') {
+      if (value === 'close') {
         setIsOpen(false);
-      }
+      } 
     },
     [isOpen]
   );
 
   return (
     <S.RootArticle role='dialog'>
-      <div
+      <S.ContentDiv
         dangerouslySetInnerHTML={{
           __html: marked(project.content || ''),
         }}
-      ></div>
+      ></S.ContentDiv>
 
       <S.MainButtonUl>
         <li>
@@ -58,7 +57,7 @@ export default function ProjectModal({
           </li>
         )}
         <li>
-          <button value='close' type='button'>
+          <button value='close' type='button' onClick={onClickMainButton} >
             <Icon identity={['fa', 'times']} kind='solid'></Icon>
           </button>
         </li>

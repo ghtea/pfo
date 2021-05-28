@@ -104,6 +104,39 @@ export const CheeBoardDiv = styled.div`
   }
 `;
 
+export const TopNav = styled.nav`
+  position: absolute;
+  top: 0px;
+
+  ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: normal;
+
+    color: ${(p: Props) => p.theme.color.main.s9};
+    
+
+    margin-right: auto;
+
+    margin-top: 16px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+
+    @media (min-width: ${(p: Props) => p.theme.media.sm}px) {
+      margin-top: 11px;
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+    }
+
+    & > li:nth-child(n + 2) {
+      margin-left: 12px;
+    }
+  }
+`;
+
 export const BottomButton = styled.button`
   position: absolute;
   bottom: -5px;

@@ -23,13 +23,28 @@ export const RootArticle = styled.article`
   background-color: ${(p: Props) => p.theme.color.basic.s0};
   // color: ${(p: Props) => p.theme.color.basic.s0};
 
-  h4 {
+  overflow: auto;
+`;
+
+
+
+export const ContentDiv = styled.div`
+  h3 {
     font-size: 2rem;
     font-weight: lighter;
+
+    // margin-bottom: 100px;
   }
 `;
 
+
+
 export const MainButtonUl = styled.ul`
+  /* position: absolute;
+  top: 0; */
+
+  margin-top: 60px;
+
   display: flex; // grid
   flex-flow: row nowrap;
   justify-content: center;

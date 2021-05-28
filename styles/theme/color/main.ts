@@ -1,7 +1,7 @@
 // main
 // hsl(131, 60%, 33%)
 const h = 136;
-const s = 70;
+const s = 75;
 
 export const light = {
   's0': `hsl(${h}, ${s}%, 100%)`,

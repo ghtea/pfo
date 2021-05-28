@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { MouseEventHandler, useCallback, useContext } from 'react';
+import { MouseEventHandler, useCallback, useContext, useMemo } from 'react';
 import * as S from './index.styled';
 import Icon from 'components/global/Icon';
 import { ThemeContext } from 'styled-components';
@@ -7,6 +7,21 @@ import { Theme } from 'styles/theme';
 
 export default function Greeting() {
   const theme = useContext<Theme>(ThemeContext);
+
+  const onClickAnchor: MouseEventHandler<HTMLAnchorElement> = useCallback(
+    (event) => {
+      event.preventDefault();
+      const idToGo = event.currentTarget.getAttribute('href');
+      //console.warn(idToGo);
+      if (idToGo) {
+        const h3ToGo = document.getElementById(idToGo);
+        if (h3ToGo) {
+          h3ToGo.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    },
+    []
+  );
 
   const onClickDown: MouseEventHandler<HTMLButtonElement> = useCallback(
     (event) => {
@@ -23,6 +38,15 @@ export default function Greeting() {
     },
     []
   );
+
+  const navList = useMemo(() => {
+    return [
+      { name: 'Profile', href: '##profile' },
+      { name: 'Skills', href: '##skills' },
+      { name: 'Collaboration', href: '###collaboration'},
+      { name: 'Projects', href: '##projects' },
+    ];
+  }, []);
 
   return (
     <S.RootSection>
@@ -52,6 +76,18 @@ export default function Greeting() {
           <div></div>
         </S.CheeBoardDiv>
       </div>
+
+      <S.TopNav>
+        <ul>
+          {navList.map((e, i) => (
+            <li key={`${i}-${e.name}`}>
+              <a href={e.href} onClick={onClickAnchor}>
+                {e.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </S.TopNav>
 
       <S.BottomButton onClick={onClickDown}>
         <Icon
