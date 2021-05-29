@@ -5,6 +5,7 @@ year: 2020
 github: 'https://github.com/ghtea/STORMSCAPE'
 website: ''
 myRole: 'all (데이터편집, 프론트엔드)'
+bonusImageList: []
 ---
 
 ### STORMSCAPE

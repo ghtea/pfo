@@ -4,7 +4,6 @@ import 'libraries/fontawesome';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { GlobalStyle } from 'styles/GlobalStyle';
 import themeDict from 'styles/theme';
-import 'libraries/animations';
 
 import smoothscroll from 'smoothscroll-polyfill';
 import { useEffect } from 'react';

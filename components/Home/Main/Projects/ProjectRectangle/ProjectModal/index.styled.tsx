@@ -30,10 +30,15 @@ export const RootArticle = styled.article`
 `;
 
 
-// export const ModalContainerDiv = styled.div`
-//   overflow-y: auto;
-//   height: auto;
-// `;
+export const CloseButton = styled.button`
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+  width: 36px;
+  height: 36px;
+  color: ${(p: Props) => p.theme.color.basic.s4};
+`
 
 export const ProjectContentDiv = styled(ContentDiv)`
   
@@ -54,7 +59,7 @@ export const MainButtonUl = styled.ul`
     width: 60px;
     height: 60px;
 
-    & > * {
+    & > a {
       color: ${(p: Props) => p.theme.color.basic.s5};
 
       display: inline-flex; // grid
@@ -65,23 +70,31 @@ export const MainButtonUl = styled.ul`
       width: 70%;
       height: 70%;
     }
-    &:nth-last-child(1) > * {
-      width: 40%;
-      height: 40%;
-    }
   }
 `;
 
 
 export const ImageDiv = styled.div`
-  width: 90%;
-  height: 180px;
-  @media (min-width: ${(p: Props) => p.theme.media.sm}px) {
-    height: 240px;
-  }
+  
   border: 2px solid ${(p: Props) => p.theme.color.basic.s2};
 
   &:nth-child(n+2) {
     margin-top: 10px;
   }
+`
+
+export const MainImageDiv = styled(ImageDiv)`
+  width: 90%;
+  height: 180px;
+  @media (min-width: ${(p: Props) => p.theme.media.sm}px) {
+    height: 240px;
+  }
+`
+
+export const SkillImageDiv = styled(ImageDiv)`
+  width: 90%;
+  /* height: auto;
+  @media (min-width: ${(p: Props) => p.theme.media.sm}px) {
+    height: auto;
+  } */
 `

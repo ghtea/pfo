@@ -11,6 +11,7 @@ import {
 } from 'react';
 import Icon from 'components/global/Icon';
 import marked from 'marked';
+import useDimensions from 'react-cool-dimensions';
 
 type ProjectModalProp = {
   project: ProjectData;
@@ -34,8 +35,14 @@ export default function ProjectModal({
     [isOpen]
   );
 
+  const { observe, width, height } = useDimensions<HTMLDivElement | null>();
+
   return (
     <S.RootArticle role='dialog'>
+      <S.CloseButton value='close' type='button' onClick={onClickMainButton}>
+        <Icon identity={['fa', 'times']} kind='solid'></Icon>
+      </S.CloseButton>
+
       <S.ProjectContentDiv
         dangerouslySetInnerHTML={{
           __html: marked(project.content || ''),
@@ -54,14 +61,9 @@ export default function ProjectModal({
             </a>
           </li>
         )}
-        <li>
-          <button value='close' type='button' onClick={onClickMainButton}>
-            <Icon identity={['fa', 'times']} kind='solid'></Icon>
-          </button>
-        </li>
       </S.MainButtonUl>
 
-      <S.ImageDiv>
+      <S.MainImageDiv>
         <Image
           src={`/images/projects/${project.id}.png`}
           alt={`Picture of the ${project.name}`}
@@ -69,17 +71,20 @@ export default function ProjectModal({
           width='100%'
           height='100%'
         />
-      </S.ImageDiv>
+      </S.MainImageDiv>
 
-      <S.ImageDiv>
-        <Image
-          src={`/images/projects/${project.id}.png`}
-          alt={`Picture of the ${project.name}`}
-          layout='responsive'
-          width='100%'
-          height='100%'
-        />
-      </S.ImageDiv>
+      {project.bonusImageList.includes('skills') && (
+        <S.SkillImageDiv ref={observe}>
+          <Image
+            src={`/images/projects/${project.id} skills.png`}
+            alt={`Picture of the skill used in ${project.name}`}
+            layout='responsive'
+            objectFit='contain'
+            width={width}
+            height={width * 0.7}
+          />
+        </S.SkillImageDiv>
+      )}
     </S.RootArticle>
   );
 }

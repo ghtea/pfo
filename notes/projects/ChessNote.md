@@ -5,6 +5,7 @@ year: 2021
 github: 'https://github.com/ghtea/chess-note'
 website: 'https://cn.nextwing.me/quiz'
 myRole: 'all'
+bonusImageList: ['skills']
 ---
 
 ### Chess Note

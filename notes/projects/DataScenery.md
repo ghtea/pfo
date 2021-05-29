@@ -5,6 +5,7 @@ year: 2020
 github: 'https://github.com/ghtea/data-scenery'
 website: 'https://ds.nextwing.me/sports/football'
 myRole: 'all'
+bonusImageList: ['skills']
 ---
 
 ### Data Scenery

@@ -51,6 +51,8 @@ export type ProjectData =  NoteData & {
   year: number;
   github: string;
   website?: string;
+  myRole: string;
+  bonusImageList: string[];
 };
 
 

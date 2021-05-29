@@ -5,6 +5,7 @@ year: 2021
 github: 'https://github.com/ghtea/pfo'
 website: ''
 myRole: 'all'
+bonusImageList: ['skills']
 ---
 
 ### Portfolio

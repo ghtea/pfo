@@ -5,6 +5,7 @@ year: 2020
 github: 'https://github.com/ghtea/portal-view'
 website: 'https://pv.nextwing.me'
 myRole: 'all'
+bonusImageList: ['skills']
 ---
 
 ### Portal View

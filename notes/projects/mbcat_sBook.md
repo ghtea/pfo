@@ -4,7 +4,8 @@ level: 'sub'
 year: 2019
 github: 'https://github.com/ghtea/hots'
 website: 'https://ghtea.github.io/hots/'
-myRole: 'all (데이터분석, 시각화)'
+myRole: 'all'
+bonusImageList: []
 ---
 
 ### mbcat's book

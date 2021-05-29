@@ -5,6 +5,7 @@ year: 2020
 github: 'https://github.com/ghtea/nextstorm'
 website: ''
 myRole: 'all'
+bonusImageList: ['skills']
 ---
 
 ### Next Storm
