@@ -17,6 +17,9 @@ export default function Collaboration() {
           <strong> 폴더 시스템 </strong> 을 항상 고민해서 체계적이고 효율적인 방식을 찾고자 노력합니다
         </li>
         <li>
+          <strong> eslint, prettier </strong> 를 직접 원하는대로 설정하고, 협업하는 팀원과 맞춰서 사용한 경험이 있습니다
+        </li>
+        <li>
           <strong> git commit 메시지 </strong> 컨벤션을 사용합니다
         </li>
         <li>
