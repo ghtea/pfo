@@ -71,7 +71,8 @@ export default function Skills({ skillDataList }: SkillsProp) {
             </S.SkillUl>
           </S.SkillGroup>
           <S.SkillGroup>
-            <span><span>
+            <span>
+              <span>
                 <Icon
                   identity={['fa', 'star']}
                   kind='solid'
@@ -91,7 +92,8 @@ export default function Skills({ skillDataList }: SkillsProp) {
                   height='2rem'
                 ></Icon>
               </span>
-              <span>Used Many Times</span></span>
+              <span>Used Many Times</span>
+            </span>
             <S.SkillUl>
               {refinedSkillListDict.level2.map((eachSkillData, index) => (
                 <SkillSquare
@@ -102,7 +104,8 @@ export default function Skills({ skillDataList }: SkillsProp) {
             </S.SkillUl>
           </S.SkillGroup>
           <S.SkillGroup>
-            <span><span>
+            <span>
+              <span>
                 <Icon
                   identity={['fa', 'star']}
                   kind='solid'
@@ -122,7 +125,8 @@ export default function Skills({ skillDataList }: SkillsProp) {
                   height='2rem'
                 ></Icon>
               </span>
-              <span>Used A Bit</span></span>
+              <span>Used A Bit</span>
+            </span>
             <S.SkillUl>
               {refinedSkillListDict.level1.map((eachSkillData, index) => (
                 <SkillSquare
@@ -142,10 +146,13 @@ export default function Skills({ skillDataList }: SkillsProp) {
             <S.SkillArticle
               id={getArticleId(eachSkillData.id)}
               key={eachSkillData.id}
-              dangerouslySetInnerHTML={{
-                __html: marked(eachSkillData.content || ''),
-              }}
-            ></S.SkillArticle>
+            >
+              <S.SkillContentDiv
+                dangerouslySetInnerHTML={{
+                  __html: marked(eachSkillData.content || ''),
+                }}
+              ></S.SkillContentDiv>
+            </S.SkillArticle>
           ))}
         </S.DetailDiv>
       </div>

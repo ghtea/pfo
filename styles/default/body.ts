@@ -7,7 +7,8 @@ const body = `body {
   align-items: center;
 
   font-family: 'Noto Sans KR', sans-serif;
-
+  font-size: 17px;
+  
   width: 100%;
   min-width: 360px !important;
 

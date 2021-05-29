@@ -23,26 +23,24 @@ export default function ProjectModal({
   isOpen,
   setIsOpen,
 }: ProjectModalProp) {
-
   const onClickMainButton: MouseEventHandler<HTMLButtonElement> = useCallback(
     (event) => {
       event.preventDefault();
       const { value } = event.currentTarget;
       if (value === 'close') {
         setIsOpen(false);
-      } 
+      }
     },
     [isOpen]
   );
 
   return (
     <S.RootArticle role='dialog'>
-      <S.ContentDiv
+      <S.ProjectContentDiv
         dangerouslySetInnerHTML={{
           __html: marked(project.content || ''),
         }}
-      ></S.ContentDiv>
-
+      ></S.ProjectContentDiv>
       <S.MainButtonUl>
         <li>
           <a href={project.github}>
@@ -57,13 +55,31 @@ export default function ProjectModal({
           </li>
         )}
         <li>
-          <button value='close' type='button' onClick={onClickMainButton} >
+          <button value='close' type='button' onClick={onClickMainButton}>
             <Icon identity={['fa', 'times']} kind='solid'></Icon>
           </button>
         </li>
       </S.MainButtonUl>
 
-      <div></div>
+      <S.ImageDiv>
+        <Image
+          src={`/images/projects/${project.id}.png`}
+          alt={`Picture of the ${project.name}`}
+          layout='responsive'
+          width='100%'
+          height='100%'
+        />
+      </S.ImageDiv>
+
+      <S.ImageDiv>
+        <Image
+          src={`/images/projects/${project.id}.png`}
+          alt={`Picture of the ${project.name}`}
+          layout='responsive'
+          width='100%'
+          height='100%'
+        />
+      </S.ImageDiv>
     </S.RootArticle>
   );
 }

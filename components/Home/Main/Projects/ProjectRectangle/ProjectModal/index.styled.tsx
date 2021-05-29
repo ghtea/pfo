@@ -1,10 +1,11 @@
+import { ContentDiv } from 'components/Home/Main/index.styled';
 import styled from 'styled-components';
 import { Props } from 'styles/GlobalStyle';
 
 export const RootArticle = styled.article`
   display: flex; // grid
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   position: fixed;
@@ -12,32 +13,31 @@ export const RootArticle = styled.article`
   transform: translateY(-50%) translateX(-50%);
   left: 50%;
   z-index: 10;
+  padding: 10px;
 
   width: 90%;
+  min-width: ${(p: Props) => p.theme.media.min * 0.9}px;
   max-width: ${(p: Props) => p.theme.media.sm}px;
 
-  height: 90%;
+  height: auto;
   max-height: ${(p: Props) => p.theme.media.sm}px;
 
   border: 2px solid ${(p: Props) => p.theme.color.main.s8};
   background-color: ${(p: Props) => p.theme.color.basic.s0};
   // color: ${(p: Props) => p.theme.color.basic.s0};
 
-  overflow: auto;
+  overflow-y: auto;
 `;
 
 
+// export const ModalContainerDiv = styled.div`
+//   overflow-y: auto;
+//   height: auto;
+// `;
 
-export const ContentDiv = styled.div`
-  h3 {
-    font-size: 2rem;
-    font-weight: lighter;
-
-    // margin-bottom: 100px;
-  }
+export const ProjectContentDiv = styled(ContentDiv)`
+  
 `;
-
-
 
 export const MainButtonUl = styled.ul`
   /* position: absolute;
@@ -71,3 +71,17 @@ export const MainButtonUl = styled.ul`
     }
   }
 `;
+
+
+export const ImageDiv = styled.div`
+  width: 90%;
+  height: 180px;
+  @media (min-width: ${(p: Props) => p.theme.media.sm}px) {
+    height: 240px;
+  }
+  border: 2px solid ${(p: Props) => p.theme.color.basic.s2};
+
+  &:nth-child(n+2) {
+    margin-top: 10px;
+  }
+`

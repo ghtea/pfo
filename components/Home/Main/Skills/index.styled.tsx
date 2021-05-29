@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Props } from 'styles/GlobalStyle';
-import { BasicSection } from '../index.styled';
+import { BasicSection, ContentDiv } from '../index.styled';
 
 const spaceColor = 'hsl(51, 27%, 85%)';
 
@@ -60,49 +60,14 @@ export const DetailDiv = styled.div`
   border: 2px solid ${spaceColor};
 `;
 
-export const SkillArticle = styled.article`
+
+export const SkillArticle = styled.div`
   &:nth-child(n + 2) {
     margin-top: 100px;
   }
+`
 
-  width: 100%;
-  max-width: ${(p: Props) => p.theme.media.sm - 160}px;
-  margin: auto;
+export const SkillContentDiv = styled(ContentDiv)`
+  
 
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-start;
-
-  h3 {
-    align-self: center;
-    color: ${(p: Props) => p.theme.color.main.s8};
-  }
-
-  ul {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-    li {
-      display: inline-flex;
-      flex-flow: row nowrap;
-      justify-content: flex-start;
-      align-items: center;
-
-      &::before {
-        /* position: absolute;
-        left: -16px;
-        bottom: 3px; */
-        margin-right: 6px;
-        content: '■';
-        font-size: 0.6rem;
-        color: ${(p: Props) => p.theme.color.main.s8};
-      }
-
-      &:nth-child(n + 2) {
-        margin-top: 8px;
-      }
-    }
-  }
 `;
