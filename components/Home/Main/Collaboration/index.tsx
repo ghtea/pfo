@@ -1,14 +1,13 @@
 import Image from 'next/image';
 import * as S from './index.styled';
-import * as S_Main from '../index.styled';
 import Icon from 'components/global/Icon';
 
 export default function Collaboration() {
   return (
     <S.RootSection>
-      <S_Main.BasicH2 id='##collaboration'>
+      <S.CollaborationBasicH2 id='##collaboration'>
         <span>Collaboration</span>
-      </S_Main.BasicH2>
+      </S.CollaborationBasicH2>
 
       <S.CollaborationExplanationUl>
         <li>

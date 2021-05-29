@@ -5,6 +5,5 @@ level: 1
 
 ### GraphQL
 
-- 주로 함수형 컴포넌트 사용
-- 기본 hook과 간단한 커스텀 hook 사용
-- ...
+- **NestJs + GraphQL + TypeORM** 으로 백엔드를 구현한 경험 있음
+- Rest API, GraphQL 모두 이용한 경험으로 둘의 차이를 이해함 

@@ -48,6 +48,12 @@ export default function ProjectModal({
           __html: marked(project.content || ''),
         }}
       ></S.ProjectContentDiv>
+
+      <S.OtherInfoDiv>
+        <span>{`${project.year}`}</span>
+        <span>{`내 역할: ${project.myRole}`}</span>
+      </S.OtherInfoDiv>
+
       <S.MainButtonUl>
         <li>
           <a href={project.github}>

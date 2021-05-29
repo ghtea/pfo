@@ -44,11 +44,28 @@ export const ProjectContentDiv = styled(ContentDiv)`
   
 `;
 
+export const OtherInfoDiv = styled.div`
+  margin-top: 30px;
+
+  font-size: 1.2rem;
+
+  display: flex; // grid
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  & > * {
+    &:nth-child(n+2){
+      margin-left: 12px;
+    }
+  }
+`
+
 export const MainButtonUl = styled.ul`
   /* position: absolute;
   top: 0; */
 
-  margin-top: 60px;
+  margin-top: 30px;
 
   display: flex; // grid
   flex-flow: row nowrap;

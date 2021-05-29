@@ -4,7 +4,6 @@ import Skills from './Skills';
 import Collaboration from './Collaboration';
 import Projects from './Projects';
 import { SkillData, ProjectData } from 'libraries/notes';
-
 import * as S from './index.styled';
 
 type MainProp = {

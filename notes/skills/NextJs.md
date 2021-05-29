@@ -5,6 +5,5 @@ level: 1
 
 ### NextJs
 
-- 주로 함수형 컴포넌트 사용
-- 기본 hook과 간단한 커스텀 hook 사용
-- ...
+- 포트폴리오를 NextJs 로 구현
+- 마크다운 파일을 빌드시에 불러오는 getStaticProps 등 사용 경험 있음

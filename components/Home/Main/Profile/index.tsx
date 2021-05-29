@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import * as S from './index.styled';
-import * as S_Main from '../index.styled';
 import Icon from 'components/global/Icon';
 
 export default function Profile() {
@@ -16,9 +15,9 @@ export default function Profile() {
       </S.DeskImageDiv>
 
       <div>
-        <S_Main.BasicH2 id='##profile'>
+        <S.ProfileBasicH2 id='##profile'>
           <span>Profile</span>
-        </S_Main.BasicH2>
+        </S.ProfileBasicH2>
 
         <S.WebsiteUl>
           <li>

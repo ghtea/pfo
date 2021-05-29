@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import * as S from './index.styled';
-import * as S_Main from '../index.styled';
 import { MouseEventHandler, useCallback, useMemo } from 'react';
 import { SkillData } from 'libraries/notes';
 import marked from 'marked';
@@ -33,9 +32,9 @@ export default function Skills({ skillDataList }: SkillsProp) {
   return (
     <S.RootSection>
       <div>
-        <S_Main.BasicH2 id='##skills'>
+        <S.SkillsBasicH2 id='##skills'>
           <span>Skills</span>
-        </S_Main.BasicH2>
+        </S.SkillsBasicH2>
         <div>
           <S.SkillGroup>
             <span>
