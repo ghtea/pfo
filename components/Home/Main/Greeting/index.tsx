@@ -43,7 +43,7 @@ export default function Greeting() {
     return [
       { name: 'Profile', href: '##profile' },
       { name: 'Skills', href: '##skills' },
-      { name: 'Collaboration', href: '###collaboration'},
+      { name: 'Collaboration', href: '##collaboration'},
       { name: 'Projects', href: '##projects' },
     ];
   }, []);
