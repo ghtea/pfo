@@ -2,6 +2,7 @@ import { createGlobalStyle, ThemedStyledProps } from 'styled-components';
 import themeDict from 'styles/theme';
 
 import reset from 'styled-reset';
+import { normalize } from 'styled-normalize'
 import all from './default/all';
 
 import a from './default/a';
@@ -18,7 +19,7 @@ import table from './default/table';
 import textarea from './default/textarea';
 
 export const GlobalStyle = createGlobalStyle`
-  ${reset}
+  ${normalize}
   
   ${all}
 
