@@ -24,6 +24,7 @@ export default function ProjectModal({
   isOpen,
   setIsOpen,
 }: ProjectModalProp) {
+
   const onClickMainButton: MouseEventHandler<HTMLButtonElement> = useCallback(
     (event) => {
       event.preventDefault();
@@ -32,7 +33,7 @@ export default function ProjectModal({
         setIsOpen(false);
       }
     },
-    [isOpen]
+    [isOpen, setIsOpen]
   );
 
   const { observe, width, height } = useDimensions<HTMLDivElement | null>();
