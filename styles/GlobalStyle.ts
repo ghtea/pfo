@@ -1,7 +1,6 @@
 import { createGlobalStyle, ThemedStyledProps } from 'styled-components';
 import themeDict from 'styles/theme';
 
-import reset from 'styled-reset';
 import { normalize } from 'styled-normalize'
 import all from './default/all';
 

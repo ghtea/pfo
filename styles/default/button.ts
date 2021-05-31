@@ -8,7 +8,7 @@ const button = `button {
 
   cursor: pointer;
   
-  width: auto%;
+  width: auto;
   height: auto;
 
   font-size: 1rem;

@@ -117,22 +117,25 @@ export const TopNav = styled.nav`
     font-weight: normal;
 
     color: ${(p: Props) => p.theme.color.main.s9};
-    
 
     margin-right: auto;
 
     margin-top: 16px;
     font-size: 1.2rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
+
+    & > li:nth-child(n + 2) {
+      margin-left: 0.3rem;
+    }
 
     @media (min-width: ${(p: Props) => p.theme.media.sm}px) {
       margin-top: 11px;
       font-size: 1.6rem;
       letter-spacing: 2px;
-    }
 
-    & > li:nth-child(n + 2) {
-      margin-left: 12px;
+      & > li:nth-child(n + 2) {
+        margin-left: 1rem;
+      }
     }
   }
 `;

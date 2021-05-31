@@ -23,8 +23,7 @@
     "smooth-scroll": "^16.1.3",
     "smoothscroll-polyfill": "^0.4.4",
     "styled-components": "^5.3.0",
-    "styled-normalize": "^8.0.7",
-    "styled-reset": "^4.3.4"
+    "styled-normalize": "^8.0.7"
   },
   "devDependencies": {
     "@types/marked": "^2.0.3",

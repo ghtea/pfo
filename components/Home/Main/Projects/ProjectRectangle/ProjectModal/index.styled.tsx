@@ -34,7 +34,7 @@ export const CloseButton = styled.button`
   position: absolute;
   right: 10px;
   top: 10px;
-
+  z-index: 10; // mobile safari bug ?
   width: 36px;
   height: 36px;
   color: ${(p: Props) => p.theme.color.basic.s4};

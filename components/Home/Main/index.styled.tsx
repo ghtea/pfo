@@ -10,14 +10,12 @@ export const RootMain = styled.main`
   padding-bottom: 160px;
 `;
 
-
-
 export const BasicSection = styled.section`
   margin-top: 50px;
 
   width: 100%;
   max-width: ${(p: Props) => p.theme.media.md}px;
-` 
+`;
 
 export const BasicH2 = styled.h2`
   color: ${(p: Props) => p.theme.color.basic.s9};
@@ -32,14 +30,16 @@ export const BasicH2 = styled.h2`
     font-weight: normal;
     letter-spacing: 1px;
     width: auto;
-    background-image: linear-gradient(120deg, ${(p: Props) => p.theme.color.main.s6} 0%, ${(p: Props) => p.theme.color.main.s2} 100%);
+    background-image: linear-gradient(
+      120deg,
+      ${(p: Props) => p.theme.color.main.s6} 0%,
+      ${(p: Props) => p.theme.color.main.s2} 100%
+    );
     background-repeat: no-repeat;
     background-size: 100% 0.36em;
     background-position: 0 96%;
   }
 `;
-
-
 
 // Profile, Collaboration
 export const ExplanationUl = styled.ul`
@@ -50,42 +50,40 @@ export const ExplanationUl = styled.ul`
 
   padding-left: 10px;
   padding-right: 10px;
-  
+
   margin-top: 20px;
 
   li {
     line-height: 1.6rem;
 
-    display: inline-flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+    display: block;
 
     font-size: 1.2rem;
     &:nth-child(n + 2) {
       margin-top: 16px;
     }
 
+    
   }
 
   strong {
     margin-left: 4px;
     margin-right: 4px;
 
+    position: relative;
+
     color: ${(p: Props) => p.theme.color.basic.s9};
     background-image: linear-gradient(
-      120deg,
-      ${(p: Props) => p.theme.color.main.s4} 0%,
-      ${(p: Props) => p.theme.color.main.s1} 100%
+      ${(p: Props) => p.theme.color.main.s1},
+      ${(p: Props) => p.theme.color.main.s4}
     );
     background-repeat: no-repeat;
-    background-size: 100% 0.36em;
-    background-position: 0 96%;
+    background-position: 0 0.8em;
+    overflow: hidden;
+    word-break: all;
+    display: inline;
   }
 `;
-
-
-
 
 export const ContentDiv = styled.div`
   width: 100%;
@@ -113,12 +111,8 @@ export const ContentDiv = styled.div`
 
     padding: 0 8px 0 8px;
     li {
-      display: inline-flex;
-      flex-flow: row wrap;
-      justify-content: flex-start;
-      align-items: center;
+      display: block;
 
-    
       &:nth-child(n + 2) {
         margin-top: 12px;
       }
@@ -127,20 +121,22 @@ export const ContentDiv = styled.div`
         margin-left: 4px;
         margin-right: 4px;
 
+        position: relative;
+
         color: ${(p: Props) => p.theme.color.basic.s9};
         background-image: linear-gradient(
-          120deg,
-          ${(p: Props) => p.theme.color.main.s4} 0%,
-          ${(p: Props) => p.theme.color.main.s1} 100%
+          ${(p: Props) => p.theme.color.main.s1},
+          ${(p: Props) => p.theme.color.main.s4}
         );
         background-repeat: no-repeat;
-        background-size: 100% 0.36em;
-        background-position: 0 96%;
+        background-position: 0 0.8em;
+        overflow: hidden;
+        word-break: all;
+        display: inline;
       }
     }
   }
 `;
-
 
 /*
 margin-left: 2rem;

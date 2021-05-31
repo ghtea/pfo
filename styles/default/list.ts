@@ -1,4 +1,9 @@
 const list = `
+
+  ul, ol, menu, dir {
+    padding-inline-start: 0;
+  }
+
   ul, ol {
     display: flex;
     flex-flow: row wrap;
