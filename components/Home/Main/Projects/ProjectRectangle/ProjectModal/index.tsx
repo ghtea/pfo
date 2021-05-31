@@ -27,13 +27,13 @@ export default function ProjectModal({
 
   const onClickMainButton: MouseEventHandler<HTMLButtonElement> = useCallback(
     (event) => {
-      event.preventDefault();
+      //event.preventDefault();
       const { value } = event.currentTarget;
       if (value === 'close') {
         setIsOpen(false);
       }
     },
-    [isOpen, setIsOpen]
+    [isOpen]
   );
 
   const { observe, width, height } = useDimensions<HTMLDivElement | null>();
